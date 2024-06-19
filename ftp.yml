@@ -1,6 +1,7 @@
 ---
 - hosts: slave
   gather_facts: false
+  become_user: utkarsh
   become: true
   tasks:
     - name: install ftp
