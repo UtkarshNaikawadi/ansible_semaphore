@@ -1,0 +1,9 @@
+---
+- hosts: slave
+  gather_facts: false
+  become: true
+  tasks:
+    - name: install ftp
+      ansible.builtin.yum:
+        name: ftp
+        state: present
